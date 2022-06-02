@@ -50,6 +50,16 @@ href="mailto:samtaylor92@live.co.uk" target="_blank"><img alt="Email" src="https
 </details>
 </details>  
 
+<details open>
+<summary> <h3>💡[Solution]</h3> </summary>
+  
+`Description:` Created a formula that used regex features to count how many separators were in the desired column and then used that information to duplicate the information X times, accordingly <br>
+`Repository:` [(Link)](https://github.com/SamTaylor92/-Q2-2022--Split-Google-Form-responses--1-row-per-email-address-)<br> 
+`Status:` ✅
+
+</details>
+</details>
+
 <br>
 This repository is to document the solution to this problem.
 </p>
