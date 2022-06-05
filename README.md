@@ -10,6 +10,17 @@ href="https://signal.group/#CjQKIO50NLkjJmSisbgDD4OhRj5lHG7X-SJTOl-Dn8Fkc4FpEhCY
 href="mailto:samtaylor92@live.co.uk" target="_blank"><img alt="Email" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 </p>
 <p align="right">
+
+
+## Project brief
+> **Notes:** 
+> - To protect the client's data & confidentiality, all data has been replaced with dummy data
+> - For best results, use the [Google Drive](https://drive.google.com/drive/folders/1WyRiRz61UrZTVK4pKKVhwpSlE0xBss7D?usp=sharing) folder and view using [Google Sheets](https://docs.google.com/spreadsheets/d/1m78KrpmYFooY-qyqPZyqhWqVIkb9rdX4-7U85oVYeY0/edit?usp=sharing) (as opposed to the GitHub repository)<br>
+  
+A small project for a client who wanted to use more of Google Sheet's functionality to save customers time when inputting data into a Google Form.<br>
+<br> The aim was: 
+- To allow multiple email entries in a Google Forms questionnaire, in the front end.
+- In the back end, split the data entries once per email address entered, with the rest of the information duplicated.
   
 ![Example_outcome](https://user-images.githubusercontent.com/105542266/171631328-dea24fec-85f9-4053-b764-d875b1bf6499.png)
 
@@ -19,16 +30,27 @@ href="mailto:samtaylor92@live.co.uk" target="_blank"><img alt="Email" src="https
 <a target="_blank"><img alt="Google Sheets" src="https://img.shields.io/badge/Google%20Sheets-34A853.svg?style=for-the-badge&logo=Google-Sheets&logoColor=white"/></a>
 <a target="_blank"><img alt="Google Forms" src="https://img.shields.io/badge/Google%20Forms-7A1FA2.svg?style=for-the-badge&logo=Google&logoColor=white"/></a>
 </p>
+
+<details>
+<summary> <h2>Table of contents</h2></summary>	
+
+- [Project brief](#project-brief)
+- [Problem](#problem)
+- [Desired outcome](#desired-outcome)
+- [Input data](#table-current-input-data)
+- [Ideal data](#table-ideal-output-data)  
+- [Solution](#solution)
+- [Reference material](#reference-material)
   
-## Project brief
-[**Note:** To protect the client's data & confidentiality, all data has been replaced with dummy data]  
+</details>
 
 <details open>
 <summary> <h3>💼[Problem]</h3> </summary>
   
 - The client had trouble with a procedure that required people to enter feedback via a [Google Form](https://docs.google.com/forms/d/1S6O072szAOvC3gC9Y0Xg4-_6mz1vwqweOJRUHXM3gis/viewform?edit_requested=true).<br>
 - If there was more than 1 person that needed feedback for a specific incident, then people had to report the incident once per person involved, despite the rest of the information being the same. This, of course, wasted time. <br>
-
+<p align='right'><a href="#-tools" target="_blank">⬆</a></p>	
+  
 </details>
 </details>
   
@@ -46,6 +68,8 @@ href="mailto:samtaylor92@live.co.uk" target="_blank"><img alt="Email" src="https
 `Example:`
 >If 3 email addresses are entered into the `person(s) receiving feedback` [Google Forms](https://docs.google.com/forms/d/1S6O072szAOvC3gC9Y0Xg4-_6mz1vwqweOJRUHXM3gis/viewform?edit_requested=true) question, then 3 entries need to be created in the [Google Form responses spreadsheet](https://docs.google.com/spreadsheets/d/1m78KrpmYFooY-qyqPZyqhWqVIkb9rdX4-7U85oVYeY0/edit?usp=sharing) (instead of the usual 1 entry)
 
+<p align='right'><a href="#-tools" target="_blank">⬆</a></p>	
+  
 <details>
 <summary> <h4>📊[Table: Current input data]</h4> </summary>
 
@@ -57,6 +81,8 @@ href="mailto:samtaylor92@live.co.uk" target="_blank"><img alt="Email" src="https
 | 6/2/2022 14:09:27 | 3emails@hotmail.com                         | email1@hotmail.com,email2@hotmail.com,email3@hotmail.com                       | Text             | Option 2         | Option 2         | Option 9         | Text             | Text             |
 | 6/2/2022 14:10:02 | 3-emails-different-comma-errors@hotmail.com | email1spacecomma@hotmail.com ,email2commaspace@hotmail.com, email3@hotmail.com | Text             | Option 2         | Option 1         | Option 7         | Text             | Text             |
 
+<p align='right'><a href="#-tools" target="_blank">⬆</a></p>	  
+  
 </details>
 
 <details>
@@ -77,6 +103,8 @@ href="mailto:samtaylor92@live.co.uk" target="_blank"><img alt="Email" src="https
 | June 2, 2022  [14:10:02]  | 3-emails-different-comma-errors@hotmail.com | email2commaspace@hotmail.com  | Text             | Option 2         | Option 1         | Option 7         | Text             | Text             | email1spacecomma@hotmail.com ,email2commaspace@hotmail.com, email3@hotmail.com |
 | June 2, 2022  [14:10:02]  | 3-emails-different-comma-errors@hotmail.com | email3@hotmail.com            | Text             | Option 2         | Option 1         | Option 7         | Text             | Text             | email1spacecomma@hotmail.com ,email2commaspace@hotmail.com, email3@hotmail.com |
 
+<p align='right'><a href="#-tools" target="_blank">⬆</a></p>	
+  
 </details>
   
   
@@ -93,19 +121,26 @@ For best results, use the [Google Drive](https://drive.google.com/drive/folders/
 ```
 =ARRAYFORMULA(QUERY(SPLIT(FLATTEN('Form Responses 1'!A2:A&"|"&'Form Responses 1'!B2:B&"|"&'Form Responses 1'!C2:C&"|"&'Form Responses 1'!D2:D&"|"&'Form Responses 1'!E2:E&"|"&'Form Responses 1'!F2:F&"|"&'Form Responses 1'!G2:G&"|"&'Form Responses 1'!H2:H&"|"&'Form Responses 1'!I2:I&"|"&IFERROR(trim(SPLIT('Form Responses 1'!C2:C,",",0,0)))),"|",0,0),"Select Col1,Col2,Col10,Col4,Col5,Col6,Col7,Col8,Col9,Col3 where Col10 is not null order by Col1"))
 ```    
-`Explanation:` <br>
-- Using `FLATTEN` allows us to pull all rows together into one single column
-- We then add a divider `|` to each column
-  - This will help to separate the data back into it's original columns later, to undo the effect of `FLATTEN`
-- We can then use a nested `SPLIT` on the desired column and denote a delimiter
-  - In our scenario, we want our spreadsheet entries to be split into multiple columns if there are multiple email addresses (separated by a comma) entered into the `Person(s) receiving feedback` column (Column C)
-- `TRIM` before our nested `SPLIT` helps to reduce the effects of input errors 
-   - As we trim any white spaces from around the delimiter (in our example, a comma `,`), this allows users to input the email addresses with spaces, without causing an error. 
-- The `QUERY` helps:
-  - To filter our results from the nested `SPLIT`
-  - To select the columns and column order that we would like  
-- The `ARRAYFORMULA` ensures that the formula is dynamic and works across all rows, which is useful when the sheet will be continuously populated
+<p align='right'><a href="#-tools" target="_blank">⬆</a></p>	
+
+<details open> 
   
+<summary> <code> Explanation: </code> </summary>
+  
+> - Using `FLATTEN` allows us to pull all rows together into one single column
+> - We then add a divider `|` to each column
+>   - This will help to separate the data back into it's original columns later, to undo the effect of `FLATTEN`
+> - We can then use a nested `SPLIT` on the desired column and denote a delimiter
+> - In our scenario, we want our spreadsheet entries to be split into multiple columns if there are multiple email addresses (separated by a comma) entered into the `Person(s) receiving feedback` column (Column C)
+> - `TRIM` before our nested `SPLIT` helps to reduce the effects of input errors 
+>   - As we trim any white spaces from around the delimiter (in our example, a comma `,`), this allows users to input the email addresses with spaces, without causing an error. 
+> - The `QUERY` helps:
+>  - To filter our results from the nested `SPLIT`
+>  - To select the columns and column order that we would like  
+> - The `ARRAYFORMULA` ensures that the formula is dynamic and works across all rows, which is useful when the sheet will be continuously populated
+<p align='right'><a href="#-tools" target="_blank">⬆</a></p>	
+
+</details>  
 </details>
 </details>
 
@@ -115,6 +150,7 @@ For best results, use the [Google Drive](https://drive.google.com/drive/folders/
 - [x] [Google Documentation](https://support.google.com/docs/answer/10307761?hl=en)
 - [x] [Google Support Forums](https://support.google.com/docs/thread/46674663/can-anyone-help-me-to-split-the-date-stamp-and-text-in-the-string-%E2%80%9Capproval-history-status-app?hl=en)    
 - [x] [Table Convert](https://tableconvert.com/)
+<p align='right'><a href="#-tools" target="_blank">⬆</a></p>	
   
 </details>
 </details>
