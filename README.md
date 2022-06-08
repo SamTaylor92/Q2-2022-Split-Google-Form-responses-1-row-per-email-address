@@ -11,9 +11,12 @@ href="mailto:samtaylor92@live.co.uk" target="_blank"><img alt="Email" src="https
 </p>
 <p align="right">
 
-
-## Project brief
-> **Notes:** 
+## Project brief  
+<p> <p align='center'> 
+<img src="https://user-images.githubusercontent.com/105542266/172706476-41cad84e-7390-483f-820e-efd80c6811b6.gif"/>
+</p>
+  
+> **`Notes:`** 
 > - To protect the client's data & confidentiality, all data has been replaced with dummy data
 > - For best results, use the [Google Drive](https://drive.google.com/drive/folders/1WyRiRz61UrZTVK4pKKVhwpSlE0xBss7D?usp=sharing) folder and view using [Google Sheets](https://docs.google.com/spreadsheets/d/1m78KrpmYFooY-qyqPZyqhWqVIkb9rdX4-7U85oVYeY0/edit?usp=sharing) (as opposed to the GitHub repository)<br>
   
@@ -22,8 +25,6 @@ A small project for a client who wanted to use more of Google Sheet's functional
 - To allow multiple email entries in a Google Forms questionnaire, in the front end.
 - In the back end, split the data entries once per email address entered, with the rest of the information duplicated.
   
-![Example_outcome](https://user-images.githubusercontent.com/105542266/171631328-dea24fec-85f9-4053-b764-d875b1bf6499.png)
-
 <h2> Tools</h2>
 <p>
 <a target="_blank"><img alt="Excel" src="https://img.shields.io/badge/Microsoft%20Excel-217346.svg?style=for-the-badge&logo=Microsoft-Excel&logoColor=white"/></a>
@@ -37,8 +38,8 @@ A small project for a client who wanted to use more of Google Sheet's functional
 - [Project brief](#project-brief)
 - [Problem](#problem)
 - [Desired outcome](#desired-outcome)
-- [Input data](#table-current-input-data)
-- [Ideal data](#table-ideal-output-data)  
+  - [Input data](#table-input-data)
+  - [Ideal data](#table-output-data)  
 - [Solution](#solution)
 - [Reference material](#reference-material)
   
@@ -57,7 +58,7 @@ A small project for a client who wanted to use more of Google Sheet's functional
   
 <details open>
 <summary> <h3>🎯[Desired outcome]</h3> </summary>
-
+ 
 - The client wanted to change the procedure to allow multiple email addresses to be entered in the `person(s) receiving feedback` field of the [Google Form](https://docs.google.com/forms/d/1S6O072szAOvC3gC9Y0Xg4-_6mz1vwqweOJRUHXM3gis/viewform?edit_requested=true).
 - They also wanted a formula-based solution to split the [Google Form](https://docs.google.com/forms/d/1S6O072szAOvC3gC9Y0Xg4-_6mz1vwqweOJRUHXM3gis/viewform?edit_requested=true) responses into different rows of the [Google Form (responses)](https://docs.google.com/spreadsheets/d/1m78KrpmYFooY-qyqPZyqhWqVIkb9rdX4-7U85oVYeY0/edit?usp=sharing) spreadsheet.
   - They requested a formula-based solution, so that the solution would be dynamic and also so that they didn't need to run or maintain a script.
@@ -68,10 +69,12 @@ A small project for a client who wanted to use more of Google Sheet's functional
 `Example:`
 >If 3 email addresses are entered into the `person(s) receiving feedback` [Google Forms](https://docs.google.com/forms/d/1S6O072szAOvC3gC9Y0Xg4-_6mz1vwqweOJRUHXM3gis/viewform?edit_requested=true) question, then 3 entries need to be created in the [Google Form responses spreadsheet](https://docs.google.com/spreadsheets/d/1m78KrpmYFooY-qyqPZyqhWqVIkb9rdX4-7U85oVYeY0/edit?usp=sharing) (instead of the usual 1 entry)
 
+![Example_outcome](https://user-images.githubusercontent.com/105542266/171631328-dea24fec-85f9-4053-b764-d875b1bf6499.png)   
+  
 <p align='right'><a href="#-tools" target="_blank">⬆</a></p>	
   
 <details>
-<summary> <h4>📊[Table: Current input data]</h4> </summary>
+<summary> <h4>📊[Table: Input data]</h4> </summary>
 
 | **Timestamp**     | **Person giving feedback**                  | **Person receiving feedback**                                                  | **[Question A]** | **[Question B]** | **[Question C]** | **[Question D]** | **[Question E]** | **[Question F]** |
 |-------------------|---------------------------------------------|--------------------------------------------------------------------------------|------------------|------------------|------------------|------------------|------------------|------------------|
@@ -86,7 +89,7 @@ A small project for a client who wanted to use more of Google Sheet's functional
 </details>
 
 <details>
-<summary> <h4>📊[Table: Ideal output data]</h4> </summary>  
+<summary> <h4>📊[Table: Output data]</h4> </summary>  
 
 | **Timestamp**             | **Person giving feedback**                  | **Person receiving feedback** | **[Question A]** | **[Question B]** | **[Question C]** | **[Question D]** | **[Question E]** | **[Question F]** | **Original email entry**                                                       |
 |---------------------------|---------------------------------------------|-------------------------------|------------------|------------------|------------------|------------------|------------------|------------------|--------------------------------------------------------------------------------|
