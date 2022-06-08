@@ -138,8 +138,8 @@ For best results, use the [Google Drive](https://drive.google.com/drive/folders/
 > - `TRIM` before our nested `SPLIT` helps to reduce the effects of input errors 
 >   - As we trim any white spaces from around the delimiter (in our example, a comma `,`), this allows users to input the email addresses with spaces, without causing an error. 
 > - The `QUERY` helps:
->  - To filter our results from the nested `SPLIT`
->  - To select the columns and column order that we would like  
+>    - To filter our results from the nested `SPLIT`
+>    - To select the columns and column order that we would like  
 > - The `ARRAYFORMULA` ensures that the formula is dynamic and works across all rows, which is useful when the sheet will be continuously populated
 <p align='right'><a href="#-tools" target="_blank">⬆</a></p>	
 
