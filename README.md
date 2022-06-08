@@ -131,7 +131,7 @@ For best results, use the [Google Drive](https://drive.google.com/drive/folders/
 <summary> <code> Explanation: </code> </summary>
   
 > - Using `FLATTEN` allows us to pull all rows together into one single column
-> - We then add a divider `|` to each column `[&"|"&]`
+> - We then add a divider `|` to each column
 >   - This will help to separate the data back into it's original columns later, to undo the effect of `FLATTEN`
 > - We can then use a nested `SPLIT` on the desired column and denote a delimiter
 > - In our scenario, we want our spreadsheet entries to be split into multiple columns if there are multiple email addresses (separated by a comma) entered into the `Person(s) receiving feedback` column (Column C)
