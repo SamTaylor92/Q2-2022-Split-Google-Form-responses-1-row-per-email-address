@@ -32,7 +32,7 @@ A small project for a client who wanted to use more of Google Sheet's functional
 <a target="_blank"><img alt="Google Forms" src="https://img.shields.io/badge/Google%20Forms-7A1FA2.svg?style=for-the-badge&logo=Google&logoColor=white"/></a>
 </p>
 
-<details>
+<details open>
 <summary> <h2>Table of contents</h2></summary>	
 
 - [Project brief](#project-brief)
